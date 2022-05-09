@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id = "student2" class = "com.spellhaven.springch6ex1_0509_5.Student">		
+		<constructor-arg>
+			<value>이순신</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>40</value>
+		</constructor-arg>
+		<constructor-arg>
+			<list>
+				<value>말타기</value>
+				<value>배타기</value>
+				<value>활쏘기</value>
+			</list>
+		</constructor-arg>
+		
+		
+		<property name = "height">
+			<value>175</value>
+		</property>
+		
+		<property name = "weight">
+			<value>70</value>
+		</property>	
+	</bean>
+
+	
+	<bean id = "family" class = "com.spellhaven.springch6ex1_0509_5.Family" c:father="길동이아빠" c:mother="길동이엄마" p:sister="길동이누나" p:brother="길동이형"/>
+		
+		<!-- 모든 constructor-arg들이랑 property들을 c:father = "길동앱" 이런 식으로 L34에 올려 쓴 거 보임 ㅋ?
+		그게 Namespace 기능인데, 자주 쓰는 코드를 줄여 표현하는 거다. 꼭 쓸 필요는 없지만, 교) 단골 멘트: "이런놈이있구나알아두셈"
+		
+		
+		아래 코드 9줄이 하나로 줄어드니까 신난디 ㅋ
+		코드 요약 버억 ㅋ (<= 쓰면서도 내가 소름이 오소소 돋네. 🤮)
+		
+		<constructor-arg>
+			<value>길동이아빠</value>
+		</constructor-arg>
+		<constructor-arg>
+			<value>길동이엄마</value>
+		</constructor-arg>	
+
+		<property name="sister" value = "길동이누나"></property>
+		<property name="brother" value = "길동이형"></property>
+		</bean>
+		
+		-->
+			
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
